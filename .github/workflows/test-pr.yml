@@ -37,7 +37,7 @@ jobs:
 
       - name: Build package
         run: |
-          nix build .#copilot --print-build-logs
+          nix build .#github-copilot-cli --print-build-logs
 
       - name: Test copilot version
         run: |

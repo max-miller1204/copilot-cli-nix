@@ -38,12 +38,12 @@ jobs:
 
     - name: Build copilot
       run: |
-        nix build .#copilot
+        nix build .#github-copilot-cli
 
     - name: Push to Cachix
       if: github.ref == 'refs/heads/main'
       run: |
-        nix build .#copilot --json | jq -r '.[].outputs.out' | cachix push copilot-cli-nix
+        nix build .#github-copilot-cli --json | jq -r '.[].outputs.out' | cachix push copilot-cli-nix
 
     - name: Test copilot
       run: |

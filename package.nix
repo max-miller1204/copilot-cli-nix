@@ -36,7 +36,7 @@ assert platform != null ||
   throw "Unsupported platform: ${stdenv.hostPlatform.system}. Supported: aarch64-darwin, x86_64-darwin, x86_64-linux, aarch64-linux";
 
 stdenv.mkDerivation {
-  pname = "copilot";
+  pname = "github-copilot-cli";
   inherit version;
 
   dontUnpack = true;

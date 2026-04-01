@@ -91,7 +91,7 @@ update_to_version() {
     log_info "Verifying build..."
 
     log_info "  Building copilot (native)..."
-    if ! nix build .#copilot > /dev/null 2>&1; then
+    if ! nix build .#github-copilot-cli > /dev/null 2>&1; then
         log_error "Native build verification failed"
         return 1
     fi

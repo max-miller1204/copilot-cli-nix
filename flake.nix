@@ -9,7 +9,7 @@
   outputs = { self, nixpkgs, flake-utils }:
     let
       overlay = final: prev: {
-        copilot = final.callPackage ./package.nix { };
+        github-copilot-cli = final.callPackage ./package.nix { };
       };
     in
     flake-utils.lib.eachDefaultSystem (system:
@@ -22,18 +22,18 @@
       in
       {
         packages = {
-          default = pkgs.copilot;
-          copilot = pkgs.copilot;
+          default = pkgs.github-copilot-cli;
+          github-copilot-cli = pkgs.github-copilot-cli;
         };
 
         apps = {
           default = {
             type = "app";
-            program = "${pkgs.copilot}/bin/copilot";
+            program = "${pkgs.github-copilot-cli}/bin/copilot";
           };
-          copilot = {
+          github-copilot-cli = {
             type = "app";
-            program = "${pkgs.copilot}/bin/copilot";
+            program = "${pkgs.github-copilot-cli}/bin/copilot";
           };
         };
 
