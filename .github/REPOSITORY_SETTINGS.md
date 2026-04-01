@@ -12,9 +12,10 @@ This repository requires specific GitHub settings to enable automated updates.
    - Check **"Allow GitHub Actions to create and approve pull requests"**
 3. Click Save
 
-These settings allow the `update.yml` workflow to:
+These settings allow workflows to:
 - Modify files in the repository
-- Create pull requests for version updates
+- Create and approve pull requests for version updates
+- Enable auto-merge on generated pull requests
 - Update the flake.lock file
 
 ## Verification
@@ -25,8 +26,11 @@ After configuring the settings, you can verify the workflow works by:
 # Manually trigger the update workflow
 gh workflow run "Check for Updates"
 
-# Check the workflow status
+# Check the update workflow status
 gh run list --workflow="Check for Updates"
+
+# Check Dependabot auto-merge workflow status
+gh run list --workflow="Dependabot Auto-Merge"
 ```
 
 ## Troubleshooting

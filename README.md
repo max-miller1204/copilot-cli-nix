@@ -190,6 +190,7 @@ This repository uses GitHub Actions to automatically check for new Copilot CLI v
 2. Native binary hashes are automatically calculated for all platforms
 3. Tests run on both Linux and macOS to verify the build
 4. The PR auto-merges if all checks pass
+5. Dependabot PRs also have auto-merge automatically enabled
 
 ### Manual Updates
 
