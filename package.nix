@@ -9,7 +9,7 @@
 }:
 
 let
-  version = "1.0.16";
+  version = "1.0.17";
 
   platformMap = {
     "aarch64-darwin" = "darwin-arm64";
@@ -21,10 +21,10 @@ let
   platform = platformMap.${stdenv.hostPlatform.system} or null;
 
   nativeHashes = {
-    "darwin-arm64" = "05bghd639f4ajskvdp2wgwrz8n0in1120cayqf9hdq8ga008pp57";
-    "darwin-x64" = "0k2bcqr0qjw6yg2lrl1y0p2fa5wi4z2ipf31q8mjaig4p6azxha6";
-    "linux-x64" = "10qk3w62a822ax7q5mqw1yna4vwkhrbn7a1akzm21ps86hnjy55p";
-    "linux-arm64" = "1l7m3d87q9fpn1y9x3kg6vs1swcrzy4m71igklbn2mjk33z39hp8";
+    "darwin-arm64" = "1dykbz76cixbkph5cahm0cgrrd68myjkj0badgzn6q3ddb9ni89c";
+    "darwin-x64" = "1wgaxagma51advikf9wq2jpgbr9gqbicyyv87nvas7i9nmz10yyb";
+    "linux-x64" = "0n3zwklv6vz88v5kcjvwaa5wzaw49cp8jdfrfbm0dax85ikc76bc";
+    "linux-arm64" = "13sknrcwr7p10066394sfdk5p1n47kpr9k0a2wm9n1mpvxxjjc45";
   };
 
   src = fetchurl {
